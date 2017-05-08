@@ -1,13 +1,12 @@
-> 本人昵称: 天之妖星(kco1989/tianshi_kco)
-> 联系邮箱: <kco1989@qq.com>
-> 本文为博主原创文章，未经博主允许不得转载。如需转载,请标明博文原地址.
-> 本人的博客地址如下:
-> - [CSDN博客](http://blog.csdn.net/tianshi_kco)
-> - [segmentfaul博客](https://segmentfault.com/u/kco1989)
-> - [博客园](http://www.cnblogs.com/kco1989/)
-> - [开源中国](https://my.oschina.net/kco1989/blog)
->
-> 代码已经全部托管[github](https://github.com/kco1989/examples)有需要的同学自行下载
+> - 本人昵称: 天之妖星(kco1989/tianshi_kco)
+> - 联系邮箱: <kco1989@qq.com>
+> - 本文为博主原创文章，未经博主允许不得转载。如需转载,请标明博文原地址.
+> - 代码已经全部托管[github](https://github.com/kco1989/examples)有需要的同学自行下载
+> - 本人的博客地址如下:
+>   - [CSDN](http://blog.csdn.net/tianshi_kco)
+>   - [segmentfaul](https://segmentfault.com/u/kco1989)
+>   - [博客园](http://www.cnblogs.com/kco1989/)
+>   - [开源中国](https://my.oschina.net/kco1989/blog)
 >
 
 # 目录结构说明
