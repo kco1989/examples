@@ -1,7 +1,7 @@
-
->本人邮箱: <kco1989@qq.com>
->欢迎转载,转载请注明网址
-> 本人的博客地址
+> 本人昵称: 天之妖星(kco1989/tianshi_kco)
+> 联系邮箱: <kco1989@qq.com>
+> 本文为博主原创文章，未经博主允许不得转载。如需转载,请标明博文原地址.
+> 本人的博客地址如下:
 > - [CSDN博客](http://blog.csdn.net/tianshi_kco)
 > - [segmentfaul博客](https://segmentfault.com/u/kco1989)
 > - [博客园](http://www.cnblogs.com/kco1989/)
