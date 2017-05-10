@@ -1,7 +1,9 @@
 @startuml
 
 class CarFactory{
-    Car createCar(String type)
+    {static} Car createBmwCar()
+    {static} Car createBydCar()
+    {static} Car createMazdaCar()
 }
 interface Car{
     void run()

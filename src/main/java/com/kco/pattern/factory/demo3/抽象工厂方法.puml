@@ -1,0 +1,53 @@
+@startuml
+
+interface Wheel {
+    void description();
+}
+interface Surface {
+    void description();
+}
+interface Engine {
+    void description();
+}
+class BmwWheel implements Wheel {
+    void description();
+}
+class BydWheel implements Wheel {
+    void description();
+}
+class BmwSurface implements Surface {
+    void description();
+}
+class BydSurface implements Surface {
+    void description();
+}
+class BmwEngine implements Engine {
+    void description();
+}
+class BydEngine implements Engine {
+    void description();
+}
+
+interface CarFactory {
+    Wheel createWheel();
+    Engine createEngine();
+    Surface createSurface();
+}
+class BmwCarFactory implements CarFactory{
+    Wheel createWheel();
+    Engine createEngine();
+    Surface createSurface();
+}
+class BydCarFactory implements CarFactory{
+    Wheel createWheel();
+    Engine createEngine();
+    Surface createSurface();
+}
+BmwCarFactory --> BmwWheel
+BmwCarFactory --> BmwSurface
+BmwCarFactory --> BmwEngine
+
+BydCarFactory --> BydWheel
+BydCarFactory --> BydSurface
+BydCarFactory --> BydEngine
+@enduml
