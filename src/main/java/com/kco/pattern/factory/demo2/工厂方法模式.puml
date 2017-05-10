@@ -1,0 +1,32 @@
+@startuml
+
+interface Car{
+    run()
+}
+interface CarFactory{
+    Car createCar()
+}
+class BmwCar implements Car{
+    run()
+}
+class BydCar implements Car{
+    run()
+}
+class MazdaCar implements Car{
+    run()
+}
+class BmwCarFactory implements CarFactory{
+    Car createCar()
+}
+class BydCarFactory implements CarFactory{
+    Car createCar()
+}
+class MazdaCarFactory implements CarFactory{
+    Car createCar()
+}
+
+BmwCarFactory ..> BmwCar
+BydCarFactory ..> BydCar
+MazdaCarFactory ..> MazdaCar
+
+@enduml
