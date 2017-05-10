@@ -1,0 +1,27 @@
+@startuml
+
+class CarFactory{
+    Car createCar(String type)
+}
+interface Car{
+    void run()
+}
+
+class BmwCar implements Car{
+    void run()
+}
+class BydCar implements Car{
+    void run()
+}
+class MazdaCar implements Car{
+    void run()
+}
+class TestMain{
+    main()
+}
+CarFactory ..> BydCar
+CarFactory ..> MazdaCar
+CarFactory ..> BmwCar
+TestMain ..> CarFactory
+
+@enduml
