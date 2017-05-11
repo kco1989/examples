@@ -1,0 +1,10 @@
+@startuml
+
+class 单例{
+    {static} - 单例 : 缓存单例属性
+    - 单例()
+    {static} + 获取单例();
+}
+
+单例 .> 单例 : 创建
+@enduml
