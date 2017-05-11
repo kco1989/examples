@@ -1,0 +1,21 @@
+@startuml
+
+class Card <<abstract>>
+class Prince{
+    name: 王子
+}
+class BombMan{
+    name: 炸弹人
+}
+class CardFactory
+
+Prince -u-|> Card
+BombMan -u-|> Card
+CardFactory -r-> Prince : 创建
+CardFactory -r-> BombMan : 创建
+用户1 o-u-> Prince  : 拥有
+用户1 o-u-> BombMan  : 拥有
+用户2 o-u-> Prince  : 拥有
+用户2 o-u-> BombMan  : 拥有
+@enduml
+

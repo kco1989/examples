@@ -1,0 +1,11 @@
+@startuml
+
+class 抽象产品 <<abstract>>
+class 具体产品
+class 享元工厂
+
+具体产品 -u-|> 抽象产品
+享元工厂 -r-> 具体产品 : 创建
+用户 "n" o-u-> "1" 具体产品  : 拥有
+@enduml
+
