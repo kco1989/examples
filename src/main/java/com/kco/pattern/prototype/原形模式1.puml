@@ -1,0 +1,5 @@
+@startuml
+class 产品
+产品 --> 产品 : 复制/克隆
+@enduml
+

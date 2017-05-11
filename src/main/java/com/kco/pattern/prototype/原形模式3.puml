@@ -1,0 +1,13 @@
+@startuml
+
+class 产品1
+class 产品2
+
+产品1 o-d-> "one 属性1"
+产品1 o-d-> "one 属性2"
+产品2 o-d-> "other 属性1"
+产品2 o-d-> "other 属性2"
+
+
+@enduml
+
