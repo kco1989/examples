@@ -1,0 +1,46 @@
+@startuml
+
+abstract class InputStream
+note right :  抽象组件角色
+
+class FileInputStream
+note bottom :  具体组件角色
+
+class FilterInputStream{
+ # FilterInputStream(InputStream in)
+}
+note right :  抽象装饰者角色
+
+class BufferedInputStream{
+    + BufferedInputStream(InputStream in)
+    --增加了数据缓存的功能--
+}
+note bottom :  具体装饰者角色
+
+class DataInputStream{
+    + DataInputStream(InputStream in)
+    --增加以下功能--
+    + boolean readBoolean()
+    + byte readByte()
+    + short readShort()
+    + int readUnsignedShort()
+    + char readChar()
+    + int readInt()
+    + long readLong()
+    + float readFloat()
+    + String readLine()
+    + double readDouble()
+    + String readUTF()
+}
+note bottom :  具体装饰者角色
+
+FileInputStream -u.|> InputStream
+FilterInputStream -u.|> InputStream
+FilterInputStream o-u-> InputStream
+BufferedInputStream -u-|> FilterInputStream
+'BufferedInputStream o-u-> InputStream
+DataInputStream -u-|> FilterInputStream
+'DataInputStream o-u-> InputStream
+
+
+@enduml

@@ -1,0 +1,25 @@
+@startuml
+
+interface Food {
+    String description();
+    double price();
+}
+note left: 食物(抽象组件角色)
+class HandCakeFood
+note right: 手抓饼,要被装饰者(具体组件角色)
+class DecoratorFood
+note right: 提供装饰者接口(抽象装饰者角色)
+class ChickenDecoratorFood
+note top: 鸡肉,用于装饰手抓饼的(具体装饰者角色)
+class EggDecoratorFood
+note bottom: 鸡蛋,用于装饰手抓饼的(具体装饰者角色)
+class HamDecoratorFood
+note bottom: 火腿,用于装饰手抓饼的(具体装饰者角色)
+
+HandCakeFood -l.|> Food
+DecoratorFood -u.|> Food
+DecoratorFood o-u-> Food
+ChickenDecoratorFood -u-|> DecoratorFood
+EggDecoratorFood -u-|> DecoratorFood
+HamDecoratorFood -u-|> DecoratorFood
+@enduml
