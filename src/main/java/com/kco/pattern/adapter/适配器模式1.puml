@@ -1,0 +1,11 @@
+@startuml
+
+class 被适配者
+interface 新规范
+class 适配器
+note bottom: 适配器 is a 被适配者
+
+适配器 -u--|> 被适配者 : 继承
+适配器 -u..|> 新规范 : 实现
+
+@enduml
