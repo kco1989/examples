@@ -19,9 +19,9 @@ class MazdaCar implements Car{
 class TestMain{
     main()
 }
-CarFactory ..> BydCar
-CarFactory ..> MazdaCar
-CarFactory ..> BmwCar
-TestMain ..> CarFactory
+CarFactory --> BydCar
+CarFactory --> MazdaCar
+CarFactory --> BmwCar
+TestMain --> CarFactory
 
 @enduml

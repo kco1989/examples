@@ -13,29 +13,29 @@ class Dao1
 class Dao2
 class Dao3
 
-Client o--> Action1
-Client o--> Action2
-Client o--> Action3
+Client --> Action1
+Client --> Action2
+Client --> Action3
 
-Action1 o--> Service1
-Action1 o--> Service2
-Action1 o--> Service3
-Action2 o--> Service1
-Action2 o--> Service2
-Action2 o--> Service3
-Action3 o--> Service1
-Action3 o--> Service2
-Action3 o--> Service3
+Action1 --> Service1
+Action1 --> Service2
+Action1 --> Service3
+Action2 --> Service1
+Action2 --> Service2
+Action2 --> Service3
+Action3 --> Service1
+Action3 --> Service2
+Action3 --> Service3
 
-Service1 o--> Dao1
-Service1 o--> Dao2
-Service1 o--> Dao3
-Service2 o--> Dao1
-Service2 o--> Dao2
-Service2 o--> Dao3
-Service3 o--> Dao1
-Service3 o--> Dao2
-Service3 o--> Dao3
+Service1 --> Dao1
+Service1 --> Dao2
+Service1 --> Dao3
+Service2 --> Dao1
+Service2 --> Dao2
+Service2 --> Dao3
+Service3 --> Dao1
+Service3 --> Dao2
+Service3 --> Dao3
 
 
 

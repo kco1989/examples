@@ -25,8 +25,8 @@ class MazdaCarFactory implements CarFactory{
     Car createCar()
 }
 
-BmwCarFactory ..> BmwCar
-BydCarFactory ..> BydCar
-MazdaCarFactory ..> MazdaCar
+BmwCarFactory --> BmwCar
+BydCarFactory --> BydCar
+MazdaCarFactory --> MazdaCar
 
 @enduml
