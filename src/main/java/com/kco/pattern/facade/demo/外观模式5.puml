@@ -1,0 +1,42 @@
+@startuml
+
+class Man{
+    -- 用户 --
+}
+
+class AirCleaner{
+    -- 空气净化器 --
+    + on()
+    + off()
+}
+
+class Light{
+    -- 灯 --
+    + on()
+    + off()
+}
+
+class AirConditioning{
+    -- 空调 --
+    + on()
+    + off()
+}
+
+class Television{
+    -- 电视 --
+    + on()
+    + off()
+}
+
+class MobilePhone{
+    -- 手机 --
+    + leaveHome()
+    + goHome()
+}
+Man o--> MobilePhone
+MobilePhone o--> AirCleaner
+MobilePhone o--> Light
+MobilePhone o--> AirConditioning
+MobilePhone o--> Television
+
+@enduml

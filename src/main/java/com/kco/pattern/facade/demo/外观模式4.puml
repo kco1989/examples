@@ -1,0 +1,36 @@
+@startuml
+
+class Man{
+    -- 用户 --
+}
+
+class AirCleaner{
+    -- 空气净化器 --
+    + on()
+    + off()
+}
+
+class Light{
+    -- 灯 --
+    + on()
+    + off()
+}
+
+class AirConditioning{
+    -- 空调 --
+    + on()
+    + off()
+}
+
+class Television{
+    -- 电视 --
+    + on()
+    + off()
+}
+
+Man o--> AirCleaner
+Man o--> Light
+Man o--> AirConditioning
+Man o--> Television
+
+@enduml

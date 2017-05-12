@@ -1,0 +1,42 @@
+@startuml
+class Client
+
+class Action1
+class Action2
+class Action3
+
+class Service1
+class Service2
+class Service3
+
+class Dao1
+class Dao2
+class Dao3
+
+Client o--> Action1
+Client o--> Action2
+Client o--> Action3
+
+Action1 o--> Service1
+Action1 o--> Service2
+Action1 o--> Service3
+Action2 o--> Service1
+Action2 o--> Service2
+Action2 o--> Service3
+Action3 o--> Service1
+Action3 o--> Service2
+Action3 o--> Service3
+
+Service1 o--> Dao1
+Service1 o--> Dao2
+Service1 o--> Dao3
+Service2 o--> Dao1
+Service2 o--> Dao2
+Service2 o--> Dao3
+Service3 o--> Dao1
+Service3 o--> Dao2
+Service3 o--> Dao3
+
+
+
+@enduml
