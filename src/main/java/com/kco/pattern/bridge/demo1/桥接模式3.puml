@@ -1,0 +1,58 @@
+@startuml
+
+class Head{
+    - Face
+    - Hair
+}
+Head -d-> Face
+Head -d-> Hair
+abstract class Face{
+    - Color
+    - Eye
+    - Nose
+    - Ear
+    - Mouth
+}
+Face -d-> Color
+Face -d-> Eye
+Face -d-> Nose
+Face -d-> Ear
+Face -d-> Mouth
+class Face1
+class Face2
+Face1 -u-|> Face
+Face2 -u-|> Face
+abstract class Hair{
+    - Color
+}
+class Hair1
+class Hair2
+Hair -d-> Color
+Hair1 -u-|> Hair
+Hair2 -u-|> Hair
+abstract class Eye{
+    - Color
+}
+class Eye1
+class Eye2
+Eye -d-> Color
+Eye1 -u-|> Eye
+Eye2 -u-|> Eye
+abstract class Nose
+class Nose1
+class Nose2
+Nose1 -u-|> Nose
+Nose2 -u-|> Nose
+abstract class Ear
+class Ear1
+class Ear2
+Ear1 -u-|> Ear
+Ear2 -u-|> Ear
+abstract class Mouth
+class Mouth1
+class Mouth2
+Mouth1 -u-|> Mouth
+Mouth2 -u-|> Mouth
+
+
+@enduml
