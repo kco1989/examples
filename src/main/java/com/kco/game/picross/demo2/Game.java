@@ -1,7 +1,8 @@
-package com.kco.game.picross.demo1;
+package com.kco.game.picross.demo2;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+import com.kco.game.picross.demo1.Utils;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.BufferedReader;
@@ -20,7 +21,7 @@ public class Game {
     private List<String> lineConditions;
     private List<List<Integer>> rowMaybeValue;
     private List<List<Integer>> lineMaybeValue;
-    private MapModel model;
+    private MapData mapData;
 
 
     public Game(String file){
@@ -30,7 +31,7 @@ public class Game {
     public Game(File file){
         parseFile(file);
         parseConditions();
-        model = new MapModel(this.count);
+        mapData = new MapData(this.count);
     }
 
     /**
@@ -135,7 +136,7 @@ public class Game {
     public void run() {
         boolean isFirst = true;
         while (true) {
-            boolean check = check();
+            boolean check = check(isFirst);
             if (isGameOver()) {
                 break;
             }
@@ -147,13 +148,13 @@ public class Game {
         }
     }
 
-    private boolean check() {
-        boolean rowCheck = check(true);
-        boolean lineCheck = check(false);
+    private boolean check(boolean isFirst) {
+        boolean rowCheck = check(isFirst, true);
+        boolean lineCheck = check(isFirst, false);
         return  rowCheck || lineCheck;
     }
 
-    private boolean check( boolean isRow){
+    private boolean check(boolean isFirst, boolean isRow){
         List<List<Integer>> maybe = isRow ? rowMaybeValue : lineMaybeValue;
         boolean isChange = false;
         for (int i = 0;i < maybe.size(); i ++){
@@ -163,13 +164,13 @@ public class Game {
             }
             int commonOneValue = commonOne(list);
             if (commonOneValue != 0){
-                model.one(isRow, i, commonOneValue);
+                mapData.set(isRow, true, i, commonOneValue);
                 isChange = true;
             }
 
             int commonZeroValue = commonZero(list);
             if (commonZeroValue != Utils.bitFillOne(this.count)){
-                model.zero(isRow, i, commonZeroValue);
+                mapData.set(isRow, false, i, commonZeroValue);
                 isChange = true;
             }
 
@@ -177,9 +178,7 @@ public class Game {
                 Iterator<Integer> iterator = list.iterator();
                 while (iterator.hasNext()){
                     Integer next = iterator.next();
-                    if ((next & model.getOne(isRow, i)) !=  model.getOne(isRow, i)){
-                        iterator.remove();
-                    }else if((next | model.getZero(isRow, i)) !=  model.getZero(isRow, i)){
+                    if (!mapData.maybeRight(isRow,i, next)){
                         iterator.remove();
                     }
                 }
@@ -187,8 +186,8 @@ public class Game {
 
             if (list.size() == 1){
                 Integer integer = list.get(0);
-                model.one(isRow, i, integer);
-                model.zero(isRow, i, integer);
+                mapData.set(isRow,true, i, integer);
+                mapData.set(isRow,false, i, integer);
                 maybe.set(i, null);
                 isChange = true;
             }
@@ -212,14 +211,14 @@ public class Game {
     }
 
 
-    public MapModel getModel() {
-        return model;
+    public MapData getMapData() {
+        return mapData;
     }
 
     public static void main(String[] args) {
-        Game game = new Game("F:\\testWork\\allExample\\example\\src\\main\\java\\com\\kco\\game\\picross\\demo2.txt");
+        Game game = new Game("F:\\testWork\\allExample\\example\\src\\main\\java\\com\\kco\\game\\picross\\demo3.txt");
         game.run();
-        System.out.println(game.getModel());
+        System.out.println(game.getMapData());
         System.out.println("sd");
     }
 
