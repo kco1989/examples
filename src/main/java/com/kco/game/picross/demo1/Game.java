@@ -1,4 +1,4 @@
-package com.kco.game.picross;
+package com.kco.game.picross.demo1;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

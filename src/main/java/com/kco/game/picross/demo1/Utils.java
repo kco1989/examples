@@ -1,4 +1,4 @@
-package com.kco.game.picross;
+package com.kco.game.picross.demo1;
 
 import org.apache.commons.lang3.StringUtils;
 

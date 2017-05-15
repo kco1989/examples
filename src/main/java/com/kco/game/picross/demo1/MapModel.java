@@ -1,6 +1,4 @@
-package com.kco.game.picross;
-
-import java.util.Arrays;
+package com.kco.game.picross.demo1;
 
 /**
  * 地图model 一般是都是N * N
