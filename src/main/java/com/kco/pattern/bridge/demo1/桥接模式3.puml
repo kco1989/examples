@@ -4,8 +4,8 @@ class Head{
     - Face
     - Hair
 }
-Head -d-> Face
-Head -d-> Hair
+Head *-d-> Face
+Head *-d-> Hair
 abstract class Face{
     - Color
     - Eye
@@ -13,11 +13,11 @@ abstract class Face{
     - Ear
     - Mouth
 }
-Face -d-> Color
-Face -d-> Eye
-Face -d-> Nose
-Face -d-> Ear
-Face -d-> Mouth
+Face *-d-> Color
+Face *-d-> Eye
+Face *-d-> Nose
+Face *-d-> Ear
+Face *-d-> Mouth
 class Face1
 class Face2
 Face1 -u-|> Face

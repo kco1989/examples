@@ -34,9 +34,9 @@ class MobilePhone{
     + goHome()
 }
 Man o--> MobilePhone
-MobilePhone o--> AirCleaner
-MobilePhone o--> Light
-MobilePhone o--> AirConditioning
-MobilePhone o--> Television
+MobilePhone ..> AirCleaner
+MobilePhone ..> Light
+MobilePhone ..> AirConditioning
+MobilePhone ..> Television
 
 @enduml

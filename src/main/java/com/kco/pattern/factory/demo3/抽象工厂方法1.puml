@@ -43,11 +43,11 @@ class BydCarFactory implements CarFactory{
     Engine createEngine();
     Surface createSurface();
 }
-BmwCarFactory --> BmwWheel
-BmwCarFactory --> BmwSurface
-BmwCarFactory --> BmwEngine
+BmwCarFactory ..> BmwWheel
+BmwCarFactory ..> BmwSurface
+BmwCarFactory ..> BmwEngine
 
-BydCarFactory --> BydWheel
-BydCarFactory --> BydSurface
-BydCarFactory --> BydEngine
+BydCarFactory ..> BydWheel
+BydCarFactory ..> BydSurface
+BydCarFactory ..> BydEngine
 @enduml

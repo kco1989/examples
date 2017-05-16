@@ -18,7 +18,7 @@ note bottom: 火腿,用于装饰手抓饼的(具体装饰者角色)
 
 HandCakeFood -l.|> Food
 DecoratorFood -u.|> Food
-DecoratorFood o-u-> Food
+DecoratorFood -u.> Food
 ChickenDecoratorFood -u-|> DecoratorFood
 EggDecoratorFood -u-|> DecoratorFood
 HamDecoratorFood -u-|> DecoratorFood

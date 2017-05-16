@@ -28,9 +28,9 @@ class Television{
     + off()
 }
 
-Man o--> AirCleaner
-Man o--> Light
-Man o--> AirConditioning
-Man o--> Television
+Man ..> AirCleaner
+Man ..> Light
+Man ..> AirConditioning
+Man ..> Television
 
 @enduml
