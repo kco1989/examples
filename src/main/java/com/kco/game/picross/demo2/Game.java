@@ -11,6 +11,7 @@ import java.io.FileReader;
 import java.util.*;
 
 /**
+ * 有bug版本
  * Created by Administrator on 2017/5/15.
  */
 public class Game {
