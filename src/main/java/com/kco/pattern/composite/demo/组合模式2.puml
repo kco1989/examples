@@ -1,0 +1,14 @@
+@startuml
+
+interface GameRole
+class Member
+class Leader{
+   - List<GameRole> gameRole;
+   + add(GameRole);
+   + remove(GameRole);
+}
+
+Member -u.|> GameRole
+Leader -u.|> GameRole
+Leader "1" o--> "n" GameRole
+@enduml
