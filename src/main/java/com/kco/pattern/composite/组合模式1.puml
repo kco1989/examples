@@ -1,14 +1,14 @@
 @startuml
 
-interface 节点
-class 叶节点
-class 根节点{
-   - List<节点> 节点List;
+interface 抽象节点
+class 叶子节点
+class 树枝节点{
+   - List<抽象节点> 抽象节点List;
    + 增加节点();
    + 删除节点();
 }
 
-叶节点 -u.|> 节点
-根节点 -u.|> 节点
-根节点 "1" o--> "n" 节点
+叶子节点 -u.|> 抽象节点
+树枝节点 -u.|> 抽象节点
+树枝节点 "1" o--> "n" 抽象节点
 @enduml
