@@ -1,0 +1,21 @@
+@startuml
+abstract Game{
+    + ();
+    # initGame();
+    # chooseRole();
+    - playLevel();
+    - gameOver();
+}
+class KnightsOfValour{
+    # initGame();
+    # chooseRole();
+}
+
+class OrientalLegend{
+    # initGame();
+    # chooseRole();
+}
+KnightsOfValour -u-|> Game
+OrientalLegend -u-|> Game
+@enduml
+
