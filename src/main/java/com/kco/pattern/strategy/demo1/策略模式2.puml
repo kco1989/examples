@@ -1,0 +1,19 @@
+@startuml
+class GoHome{
+    - TransportationMode mode
+}
+interface TransportationMode
+class BusMode
+class OnDriveBicycleMode
+class OnDriveCarMode
+class OnFootMode
+class TaxiMode
+
+GoHome -r-> TransportationMode
+BusMode -u.|> TransportationMode
+OnDriveBicycleMode -u.|> TransportationMode
+OnDriveCarMode -u.|> TransportationMode
+OnFootMode -u.|> TransportationMode
+TaxiMode -u.|> TransportationMode
+@enduml
+
