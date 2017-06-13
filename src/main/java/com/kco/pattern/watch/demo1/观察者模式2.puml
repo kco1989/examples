@@ -1,0 +1,16 @@
+@startuml
+
+
+abstract Watched{
+    - List<Watcher> watcherList
+}
+abstract Watcher
+class Celebrity
+class Fun
+
+Celebrity -u-|> Watched
+Fun -u-|> Watcher
+Watched -r-> Watcher : 通知
+
+@enduml
+
