@@ -1,0 +1,98 @@
+$android-color: #3c3;
+$body-width: 100px;
+$body-heigth: 60px;
+
+$hand-width: 40px;
+$hand-height: 130px;
+
+.android-color{
+  background-color: $android-color;
+}
+
+
+
+.android{
+  margin: 0 auto;
+  padding: 50px;
+  width: 400px;
+  height: 956px;
+  background-color:  black;
+  position: relative;
+}
+.head{
+  position: relative;
+  left:100px;
+  width: $body-width;
+  height: $body-heigth;
+}
+.jiao{
+  display: inline-block;
+  width: 5px;
+  height: 50px;
+  background-color: $android-color;
+  border-radius: 5px;
+}
+.jiao-left{
+   transform:translateX(30px) rotate(-45deg) ;
+ }
+.jiao-right{
+  transform: translateX(90px) rotate(45deg);
+}
+.face{
+  background-color: $android-color;
+  width: 150px;
+  height: 60px;
+  border-radius: 60px 60px 0 0;
+  position: relative;
+  top: -20px;
+}
+.eye{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: black;
+  border-radius: 30px;
+  position: relative;
+  top:20px;
+}
+.eye-left{
+  left: 30px;
+}
+.eye-right{
+  left: 70px;
+}
+.body{
+  position: relative;
+  top: 50px;
+}
+.hand{
+  display: inline-block;
+  width: $hand-width;
+  height: $hand-height;
+  background-color: $android-color;
+  border-radius: $hand-width;
+  margin: 0 25px 0 25px;
+}
+
+.main-body{
+  display: inline-block;
+  width: 150px;
+  height: 150px;
+  background-color: $android-color;
+  border-radius: 0 0 20px 20px;
+}
+.footer{
+  width: 40px;
+  height: 100px;
+  border-radius: 40px;
+  background-color: $android-color;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+}
+.footer-left{
+  margin: 0 20px 0 120px;
+}
+.footer-right{
+
+}
