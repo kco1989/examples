@@ -1,0 +1,2 @@
+- 创建工程 `scrapy startproject tutorial`
+- 运行工程 `scrapy crawl tencent`
