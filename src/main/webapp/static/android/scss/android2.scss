@@ -1,0 +1,111 @@
+$android-color: #3c3;
+$android-bg-color: black;
+$android-width: 400px;
+$android-height: 400px;
+$android-head-width: $android-width / 2;
+$android-head-height: $android-height / 7 * 2 ;
+$android-body-width: $android-width / 2;
+$android-body-height: $android-height / 7 * 3 - 20px;
+$android-foot-height: $android-height / 7 * 2;
+$android-hand-width: ($android-width - $android-head-width) / 2 / 3;
+.android-color{
+  background-color: $android-color;
+}
+
+
+.android{
+  position: relative;
+  background-color: $android-bg-color;
+  width: $android-width;
+  height: $android-height;
+  margin: 0 auto;
+}
+.head{
+  position: relative;
+  width: $android-head-width;
+  height: $android-head-height;
+  margin: 0 auto;
+}
+.jiao{
+  position: absolute;
+  left:0;
+  @extend .android-color;
+  width: 5px;
+  height: $android-head-height / 2;
+  border-radius: 5px;
+  display: inline-block;
+  &.left{
+    transform: translateX($android-head-width / 4) rotate(-45deg);
+  }
+  &.right{
+    transform: translateX($android-head-width / 4 * 3) rotate(45deg);
+  }
+}
+.face{
+  position: relative;
+  top: $android-head-height / 3;
+  @extend .android-color;
+  width: $android-head-width;
+  height: $android-head-height / 3 * 2;
+  border-radius: $android-head-width $android-head-width 0 0;
+}
+.eye{
+  position: absolute;
+  top: $android-head-height / 3;
+  background-color: $android-bg-color;
+  width: $android-head-width / 10;
+  height: $android-head-width / 10;
+  border-radius:  $android-head-width / 10;
+  &.left{
+    left: $android-head-width / 4;
+  }
+  &.right{
+    //float: right;
+    left: $android-head-width / 4 + $android-head-width * 2 / 5;
+  }
+}
+
+.body{
+  position: relative;
+  width: $android-width;
+  height: $android-body-height;
+  margin-top: 20px;
+}
+.hand{
+  position: absolute;
+  top: 10px;
+  margin-bottom:10px;
+  display: inline-block;
+  width: $android-hand-width;
+  height: $android-body-height - 20px;
+  border-radius: $android-hand-width;
+  @extend .android-color;
+  &.left{
+    left: $android-hand-width;
+  }
+  &.right{
+    left: ($android-width - $android-body-width) / 2 + $android-body-width + $android-hand-width;
+  }
+}
+
+.main-body{
+  @extend .android-color;
+  position: absolute;
+  left: ($android-width - $android-body-width) / 2;
+  width: $android-body-width;
+  height: $android-body-height;
+  border-radius: 0 0 20px 20px;
+}
+.footer{
+  @extend .android-color;
+  position: absolute;
+  height: $android-foot-height;
+  width: $android-hand-width;
+  border-radius: 0 0 $android-hand-width $android-hand-width;
+  &.left{
+    left: ($android-width - $android-body-width) / 2 + $android-hand-width;
+  }
+  &.right{
+    left: ($android-width - $android-body-width) / 2 + $android-body-width / 2 + $android-hand-width;
+  }
+}
