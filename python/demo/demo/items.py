@@ -17,3 +17,9 @@ class DemoItem(scrapy.Item):
     applyNum = scrapy.Field()
     wordPosition = scrapy.Field()
     publicTime = scrapy.Field()
+
+
+class MyItem(scrapy.Item):
+    title = scrapy.Field()
+    url = scrapy.Field()
+    css = scrapy.Field()

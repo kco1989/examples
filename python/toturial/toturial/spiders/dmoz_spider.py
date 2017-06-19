@@ -28,5 +28,6 @@ class DmozSpider(scrapy.Spider):
             # items.append(item)
             line = json.dumps(dict(item), ensure_ascii=False)
             f.write(line)
+            yield item
 
         f.close()
