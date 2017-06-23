@@ -73,7 +73,20 @@
             <artifactId>lucene-analyzers-common</artifactId>
             <version>${lucene-version}</version>
         </dependency>
+
+
+
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+            <version>${jedis-version}</version>
+        </dependency>
         <!-- spring -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+            <version>1.8.4.RELEASE</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
@@ -250,6 +263,7 @@
         <grpc.version>1.3.0</grpc.version>
         <lucene-version>5.5.0</lucene-version>
         <commons-dbcp2-version>2.0.1</commons-dbcp2-version>
+        <jedis-version>2.9.0</jedis-version>
     </properties>
 
     <build>
