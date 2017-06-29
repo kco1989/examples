@@ -1,8 +1,8 @@
 package com.kco.springmvc.service.impl;
 
 import com.kco.springmvc.bean.TestBean;
-import com.kco.springmvc.dao.read.TestReadDao;
-import com.kco.springmvc.dao.write.TestWriteDao;
+import com.kco.springmvc.dao.TestReadDao;
+import com.kco.springmvc.dao.TestWriteDao;
 import com.kco.springmvc.service.TestService;
 import org.springframework.stereotype.Service;
 

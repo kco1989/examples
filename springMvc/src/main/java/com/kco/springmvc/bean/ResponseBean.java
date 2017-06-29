@@ -26,8 +26,7 @@ public class ResponseBean {
 
     public ResponseBean(Object obj){
         if(obj == null){
-            setSuccess(false);
-            setMessage("未知错误.");
+            setSuccess(true);
         }else if(obj instanceof String){
             setMessage(obj.toString());
             setSuccess(false);

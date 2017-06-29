@@ -35,11 +35,11 @@
     <bean id="writeSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
           p:dataSource-ref="writeDataSource"
           p:configLocation="classpath:META-INF/mybatis/mybatis-config.xml"
-          p:mapperLocations="classpath:META-INF/mybatis/mapper/write/*.xml"/>
+          p:mapperLocations="classpath:META-INF/mybatis/mapper/*.xml"/>
 
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
-          p:basePackage="com.kco.springmvc.dao.write"
-          p:annotationClass="org.springframework.stereotype.Repository"
+          p:basePackage="com.kco.springmvc.dao"
+          p:annotationClass="com.kco.springmvc.annotation.WriteReadDataSource"
           p:sqlSessionFactoryBeanName="writeSqlSessionFactory"/>
 
     <bean id="writeTransactionManager"

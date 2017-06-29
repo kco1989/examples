@@ -5,8 +5,8 @@ package com.kco.springmvc.utils;
  * 不同类型的缓存分配不同的组
  * 在执行清缓存的时候,会把同组的缓存清空
  *
- * @see com.kco.rediscache.annotation.ClearDbMember
- * @see com.kco.rediscache.annotation.CacheDbMember
+ * @see com.kco.springmvc.annotation.ClearDbMember
+ * @see com.kco.springmvc.annotation.CacheDbMember
  *
  * Created by Administrator on 2017/6/23.
  */

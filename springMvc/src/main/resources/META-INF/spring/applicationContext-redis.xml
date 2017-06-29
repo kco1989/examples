@@ -26,9 +26,9 @@
 
     <aop:config>
         <aop:pointcut id="clearCache"
-                      expression="execution(@com.kco.rediscache.annotation.ClearDbMember * com.kco.rediscache.service.impl.*Impl.*(..)) &amp;&amp; @annotation(clearDbMember)"/>
+                      expression="execution(@com.kco.springmvc.annotation.ClearDbMember * com.kco.rediscache.service.impl.*Impl.*(..)) &amp;&amp; @annotation(clearDbMember)"/>
         <aop:pointcut id="dbCache"
-                      expression="execution(@com.kco.rediscache.annotation.CacheDbMember * com.kco.rediscache.service.impl.*Impl.*(..)) &amp;&amp; @annotation(cacheDbMember)"/>
+                      expression="execution(@com.kco.springmvc.annotation.CacheDbMember * com.kco.rediscache.service.impl.*Impl.*(..)) &amp;&amp; @annotation(cacheDbMember)"/>
         <aop:aspect ref="redisCacheAop">
             <aop:after method="clearCacheMember" pointcut-ref="clearCache"/>
             <aop:around method="dbCacheMember" pointcut-ref="dbCache"/>
