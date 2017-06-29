@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+    http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:META-INF/env_dev.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <context:annotation-config/>
+    <context:component-scan base-package="com.kco.springmvc"/>
+
+
+    <import resource="classpath:META-INF/spring/applicationContext-jdbc-read.xml"/>
+    <import resource="classpath:META-INF/spring/applicationContext-jdbc-write.xml"/>
+    <!--<import resource="classpath:META-INF/spring/applicationContext-redis.xml"/>-->
+</beans>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                http://www.springframework.org/schema/beans/spring-beans.xsd
+                http://www.springframework.org/schema/tx
+                http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <bean id="writeDataSource" class="com.alibaba.druid.pool.DruidDataSource"
+          init-method="init" destroy-method="close">
+        <property name="url" value="${sql.write.url}" />
+        <property name="username" value="${sql.write.username}" />
+        <property name="password" value="${sql.write.password}" />
+
+        <property name="filters" value="stat" />
+        <property name="maxActive" value="${sql.write.maxActive}" />
+        <property name="initialSize" value="${sql.write.initialSize}" />
+        <property name="maxWait" value="${sql.write.maxWait}" />
+        <property name="minIdle" value="${sql.write.minIdle}" />
+
+        <property name="timeBetweenEvictionRunsMillis" value="${sql.write.timeBetweenEvictionRunsMillis}" />
+        <property name="minEvictableIdleTimeMillis" value="${sql.write.minEvictableIdleTimeMillis}" />
+        <property name="maxPoolPreparedStatementPerConnectionSize" value="${sql.write.maxPoolPreparedStatementPerConnectionSize}" />
+
+        <property name="validationQuery" value="SELECT 'x'" />
+        <property name="testWhileIdle" value="true" />
+        <property name="testOnBorrow" value="false" />
+        <property name="testOnReturn" value="false" />
+
+        <property name="poolPreparedStatements" value="true" />
+    </bean>
+
+    <bean id="writeSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean"
+          p:dataSource-ref="writeDataSource"
+          p:configLocation="classpath:META-INF/mybatis/mybatis-config.xml"
+          p:mapperLocations="classpath:META-INF/mybatis/mapper/write/*.xml"/>
+
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer"
+          p:basePackage="com.kco.springmvc.dao.write"
+          p:annotationClass="org.springframework.stereotype.Repository"
+          p:sqlSessionFactoryBeanName="writeSqlSessionFactory"/>
+
+    <bean id="writeTransactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager"
+          p:dataSource-ref="writeDataSource" />
+
+    <tx:advice id="txAdvice" transaction-manager="writeTransactionManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED" rollback-for="java.lang.Throwable"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <tx:annotation-driven transaction-manager="writeTransactionManager" />
+
+</beans>

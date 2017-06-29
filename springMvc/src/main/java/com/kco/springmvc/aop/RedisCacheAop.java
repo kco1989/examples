@@ -1,23 +1,18 @@
-package com.kco.rediscache.aop;
+package com.kco.springmvc.aop;
 
 import com.google.gson.Gson;
 import com.google.gson.internal.LinkedTreeMap;
 import com.google.gson.reflect.TypeToken;
-import com.kco.rediscache.annotation.CacheDbMember;
-import com.kco.rediscache.annotation.ClearDbMember;
-import com.kco.rediscache.untils.CacheGroupEnum;
-import com.kco.rediscache.untils.JedisUtils;
-import org.aopalliance.intercept.Joinpoint;
+import com.kco.springmvc.annotation.CacheDbMember;
+import com.kco.springmvc.annotation.ClearDbMember;
+import com.kco.springmvc.utils.CacheGroupEnum;
+import com.kco.springmvc.utils.JedisUtils;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.aop.aspectj.MethodInvocationProceedingJoinPoint;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import org.springframework.util.CollectionUtils;
 import org.springframework.util.StringUtils;
 
