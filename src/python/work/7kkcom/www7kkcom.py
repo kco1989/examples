@@ -6,7 +6,7 @@ searchPath = '/search?keyword='
 keyword = u'美女'
 
 yeshu = 20
-path = "e:\\meinv\\美女"
+path = "e:\\meinv\\美女\\"
 
 
 def save_pic(pics):

@@ -31,5 +31,6 @@
           p:prefix="/WEB-INF/page/" p:suffix=".jsp" />
     <!--<mvc:redirect-view-controller path="/" redirect-url="index"/>-->
     <mvc:view-controller path="/" view-name="index"/>
-
+    <mvc:resources mapping="/druid/**" location="/druid/"/>
+    <mvc:resources mapping="/static/**" location="/static/"/>
 </beans>
