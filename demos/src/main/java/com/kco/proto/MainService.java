@@ -1,4 +1,4 @@
-//package com.kco.proto;
+package com.kco.proto;//package com.kco.proto;
 //
 //import com.kco.proto.demo2.GreeterImpl;
 //import io.grpc.Server;

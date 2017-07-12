@@ -1,4 +1,4 @@
-//package com.kco.proto;
+package com.kco.proto;//package com.kco.proto;
 //
 //import io.grpc.ManagedChannel;
 //import io.grpc.ManagedChannelBuilder;

@@ -1,4 +1,4 @@
-//package com.kco.proto.demo2;
+package com.kco.proto.demo2;//package com.kco.proto.demo2;
 //
 //import io.grpc.stub.StreamObserver;
 //import proto.GreeterServiceGrpc;
