@@ -9,6 +9,7 @@
     <modules>
         <module>springMvc</module>
         <module>demos</module>
+        <module>dubboDemo</module>
     </modules>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>example</artifactId>
@@ -261,10 +262,16 @@
                 <artifactId>druid</artifactId>
                 <version>${druid-version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo-version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
     <properties>
+        <dubbo-version>2.5.3</dubbo-version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <hibernate-core-version>5.2.9.Final</hibernate-core-version>
         <poi.version>3.14</poi.version>
