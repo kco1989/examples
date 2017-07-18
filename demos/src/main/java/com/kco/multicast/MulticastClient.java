@@ -5,6 +5,7 @@ import java.awt.event.*;
 
 import javax.swing.*;
 
+import java.io.IOException;
 import java.net.InetAddress;
 import java.net.DatagramPacket;
 import java.net.MulticastSocket;
@@ -17,8 +18,10 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
     JButton startButton;
     JButton stopButton;
     JButton cleanButton;
+    JButton sendButton;
     JTextArea currentMsg;
     JTextArea receiveMsg;
+    JTextArea sendField;
     Thread thread;
     boolean isStop = false;//停止接收广播信息的标志  
 
@@ -28,27 +31,41 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
         startButton = new JButton("开始接收");
         stopButton = new JButton("停止接收");
         cleanButton = new JButton("清空信息");
+        sendButton = new JButton("发送数据");
+        sendField = new JTextArea(1,20);
         startButton.addActionListener(this);
         stopButton.addActionListener(this);
         cleanButton.addActionListener(this);
+        sendButton.addActionListener(this);
         currentMsg = new JTextArea(3, 20);//创建3行20列的多行文本框
         currentMsg.setForeground(Color.red);//设置字体颜色为红色  
         receiveMsg = new JTextArea(8, 20);//默认字体颜色为黑色
         container.setLayout(new BorderLayout());
-        JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);//创建一带水平分隔条的面板  
+        JSplitPane sp = new JSplitPane(JSplitPane.VERTICAL_SPLIT);//创建一带水平分隔条的面板
         JScrollPane currScrollPane = new JScrollPane();
         currScrollPane.setViewportView(currentMsg);
         JScrollPane recvScrollPane = new JScrollPane();
         recvScrollPane.setViewportView(receiveMsg);
+        JScrollPane sendScrollPane = new JScrollPane();
+        sendScrollPane.setViewportView(sendField);
+
         currentMsg.setEditable(false);
         receiveMsg.setEditable(false);
+
         sp.add(currScrollPane);
         sp.add(recvScrollPane);
-        container.add(sp, BorderLayout.CENTER);
+
+        JSplitPane sp2 = new JSplitPane(JSplitPane.VERTICAL_SPLIT);//创建一带水平分隔条的面板
+        sp2.add(sp);
+        sp2.add(sendScrollPane);
+//        sp.add(sendScrollPane);
+
+        container.add(sp2, BorderLayout.CENTER);
         JPanel bottomJPanel = new JPanel();
         bottomJPanel.add(startButton);
         bottomJPanel.add(stopButton);
         bottomJPanel.add(cleanButton);
+        bottomJPanel.add(sendButton);
         container.add(bottomJPanel, BorderLayout.SOUTH);
         setSize(500, 400);
         setVisible(true);
@@ -58,7 +75,7 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
         try {
             group = InetAddress.getByName("230.198.112.0");
             socket = new MulticastSocket(port);
-            socket.joinGroup(group);
+//            socket.joinGroup(group);
         } catch (Exception e) {
 
         }
@@ -87,9 +104,24 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
         if (e1.getSource() == cleanButton) {
             receiveMsg.setText("");
         }
+        if (e1.getSource() == sendButton){
+
+            byte[] buff = sendField.getText().getBytes();
+            DatagramPacket datagramPacket = new DatagramPacket(buff, buff.length, group, port);
+            try {
+                socket.send(datagramPacket);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     public void run() {
+        try {
+            socket.joinGroup(group);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         while (true) {
             byte buff[] = new byte[8192];
             DatagramPacket packet = null;
@@ -103,6 +135,11 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
 
             }
             if (isStop == true) {
+                try {
+                    socket.leaveGroup(group);
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
                 break;
             }
         }
