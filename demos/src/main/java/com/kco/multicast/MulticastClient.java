@@ -73,6 +73,7 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
             }
             try {
                 thread.start();
+                System.out.println("重新启动....");
                 isStop = false;
             } catch (Exception ee) {
 
@@ -105,6 +106,7 @@ public class MulticastClient extends JFrame implements Runnable, ActionListener 
                 break;
             }
         }
+        System.out.println("退出....");
     }
 
     public static void main(String[] args) {

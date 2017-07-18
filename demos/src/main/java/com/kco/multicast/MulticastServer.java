@@ -3,12 +3,14 @@ package com.kco.multicast;
 import java.net.InetAddress;
 import java.net.DatagramPacket;
 import java.net.MulticastSocket;
+import java.util.concurrent.atomic.AtomicInteger;
 
 public class MulticastServer extends Thread {
     String message[] = {"失物招领：有谁在操场丢失钥匙一串，请到学校广播站认领。", "大风蓝色预警：预计今天下午有北风6级，请有关单位和人员做好防范准备。"};
     int port = 9876;//组播的端口
     InetAddress group = null;//组播的组地址
     MulticastSocket mutiSocket = null;//组播套接字
+    AtomicInteger atomicInteger = new AtomicInteger();
 
     public MulticastServer() {
         try {
@@ -27,6 +29,7 @@ public class MulticastServer extends Thread {
                 DatagramPacket packet = null;
                 for (String msg : message)//循环发送每条广播信息
                 {
+                    msg = "No. " + atomicInteger.addAndGet(1) + " : " + msg;
                     byte buff[] = msg.getBytes();
                     packet = new DatagramPacket(buff, buff.length, group, port);
                     System.out.println(new String(buff));
