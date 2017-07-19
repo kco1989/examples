@@ -1,4 +1,4 @@
-package com.kco.dubbo;
+package com.kco.dubbo.demo1.server;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,7 +9,7 @@ import java.io.IOException;
  */
 public class ServerApp {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/dubbo/provider.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/dubbo/demo1/provider.xml");
         context.start();
         System.out.println("Dubbo provider start....");
 

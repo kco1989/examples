@@ -1,4 +1,4 @@
-package com.kco.dubbo;
+package com.kco.dubbo.demo1.api;
 
 import java.util.List;
 

@@ -1,4 +1,7 @@
-package com.kco.dubbo;
+package com.kco.dubbo.demo1.server;
+
+import com.kco.dubbo.demo1.api.DemoService;
+import com.kco.dubbo.demo1.api.User;
 
 import java.util.ArrayList;
 import java.util.List;

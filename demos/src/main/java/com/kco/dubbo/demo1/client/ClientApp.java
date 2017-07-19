@@ -1,5 +1,7 @@
-package com.kco.dubbo;
+package com.kco.dubbo.demo1.client;
 
+import com.kco.dubbo.demo1.api.DemoService;
+import com.kco.dubbo.demo1.api.User;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.List;
@@ -9,7 +11,7 @@ import java.util.List;
  */
 public class ClientApp {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/dubbo/consumer.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/dubbo/demo1/consumer.xml");
         context.start();
 
         DemoService demoService = context.getBean("demoService", DemoService.class);
