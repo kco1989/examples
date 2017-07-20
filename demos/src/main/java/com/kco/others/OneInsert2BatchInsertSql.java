@@ -12,6 +12,7 @@ import java.util.regex.Pattern;
  */
 public class OneInsert2BatchInsertSql {
     public static String basePath = "D:\\用户目录\\我的文档\\Tencent Files\\568877100\\FileRecv\\新建文件夹(1)\\1706101431\\";
+    public static final int BATCH_MAX_NUMBER = 500;
     public static void main(String[] args) throws Exception {
 
         File baseFile = new File(basePath);
@@ -52,7 +53,7 @@ public class OneInsert2BatchInsertSql {
                 isFind = true;
             }
             sqlList.add(line);
-            if (sqlList.size() == 500){
+            if (sqlList.size() == BATCH_MAX_NUMBER){
                 dealWithSql(sqlList, qianzhun, bw);
                 sqlList.clear();
             }
