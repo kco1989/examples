@@ -1,5 +1,7 @@
 package com.kco.rmi;
 
+import java.rmi.Naming;
+import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
@@ -19,6 +21,9 @@ public class Client {
             IService service = (IService)registry.lookup("vince");
             String result = service.queryName("ha ha ha");
             System.out.println("result from remote: " + result);
+
+            IService lookup = (IService)Naming.lookup("rmi://127.0.0.1:8088/vince");
+            System.out.println(lookup.queryName("good"));
         }catch (Exception e){
 
         }

@@ -15,6 +15,6 @@ public class ServiceImpl extends UnicastRemoteObject implements IService {
     @Override
     public String queryName(String no) throws RemoteException {
         System.out.println("Hello " + no);
-        return String.valueOf(System.currentTimeMillis());
+        return no + " --> " + System.currentTimeMillis();
     }
 }
