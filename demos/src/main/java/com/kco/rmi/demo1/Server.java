@@ -1,4 +1,4 @@
-package com.kco.rmi;
+package com.kco.rmi.demo1;
 
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;

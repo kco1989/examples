@@ -1,11 +1,8 @@
-package com.kco.rmi;
+package com.kco.rmi.demo1;
 
 import java.rmi.Naming;
-import java.rmi.Remote;
-import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
-import java.rmi.server.RemoteRef;
 import java.util.Arrays;
 
 /**

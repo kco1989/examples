@@ -1,4 +1,4 @@
-package com.kco.rmi;
+package com.kco.rmi.demo1;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
