@@ -16,6 +16,7 @@
             - dubbo         dubbo实践例子
             - game          存放一下小游戏的程序
                 - maze      迷宫的生成
+                - picross   游戏 picross 解法, 还有bug
             - multicast     组播例子
             - others        其他小例子
             - pattern       设计模式
