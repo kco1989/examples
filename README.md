@@ -10,16 +10,26 @@
 >
 
 # 目录结构说明
-- src/python        存放python的程序
-- src/main/java/com/kco
-    - game          存放一下小游戏的程序
-        - maze      迷宫的生成
-    - primarykeybuild 自定义主键生成策略
-    - profit        两个工厂模式实现分润规则
-    - searchfile    用lucene实现文件索引的简单例子
-    - secret        密码学
-    - thread        多线程专题
-
+- example
+    - demos     存放一些简单的例子
+        - src/main/java/com/kco
+            - dubbo         dubbo实践例子
+            - game          存放一下小游戏的程序
+                - maze      迷宫的生成
+            - multicast     组播例子
+            - others        其他小例子
+            - pattern       设计模式
+            - primarykeybuild 自定义主键生成策略
+            - profit        两个工厂模式实现分润规则
+            - proto         google proto例子
+            - rediscache    redis缓存例子
+            - rmi           rmi例子
+            - searchfile    用lucene实现文件索引的简单例子
+            - secret        密码学
+            - thread        多线程专题
+    - python        存放python的程序
+    - springbootdemo1       spring boot 实践
+    - springMvc             spring + spring MVC + mybatis + redis + AOP的完整web项目例子
 
 # 打赏
 >如果觉得我的文章写的还过得去的话,有钱就捧个钱场,没钱给我捧个人场(帮我点赞或推荐一下)

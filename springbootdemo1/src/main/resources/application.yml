@@ -1,0 +1,8 @@
+server:
+  port: 8080
+management:
+  security:
+    enabled: false
+spring:
+  profiles:
+    active: dev
