@@ -9,7 +9,15 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <mvc:annotation-driven />
     <context:component-scan base-package="com.kco.springmvc" />
-
+    <bean id="mvcTaskExecutor" class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="10"/>
+        <property name="queueCapacity" value="100"/>
+        <property name="maxPoolSize" value="25"/>
+    </bean>
+    <bean id="configureAsyncSupport" class="org.springframework.web.servlet.config.annotation.AsyncSupportConfigurer">
+        <property name="defaultTimeout" value="10000"/>
+        <property name="taskExecutor" ref="mvcTaskExecutor"/>
+    </bean>
     <aop:aspectj-autoproxy proxy-target-class="true" />
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="messageConverters">
@@ -39,6 +47,7 @@
             <bean class="com.kco.springmvc.interceptor.DemoInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
+
 
     <bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
         <property name="maxUploadSize" value="1000000"/>
