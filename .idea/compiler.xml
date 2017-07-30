@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="demos" />
         <module name="springbootdemo1" />
+        <module name="springbootdemo2" />
         <module name="springMvc" />
       </profile>
     </annotationProcessing>
@@ -16,6 +17,7 @@
       <module name="dubboDemo" target="1.8" />
       <module name="example" target="1.8" />
       <module name="springbootdemo1" target="1.8" />
+      <module name="springbootdemo2" target="1.8" />
       <module name="springMvc" target="1.8" />
     </bytecodeTargetLevel>
   </component>

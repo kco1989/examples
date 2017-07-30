@@ -1,0 +1,11 @@
+server:
+  port: 9090
+#  context-path: /helloboot
+
+book:
+  author: kco1989
+  name: spring boot
+
+author:
+  name: kco1989
+  age: 25
