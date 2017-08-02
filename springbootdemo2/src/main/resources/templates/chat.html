@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <title></title>
+    <script th:src="@{stomp/sockjs.min.js}"></script>
+    <script th:src="@{stomp/stomp.min.js}"></script>
+    <script th:src="@{jquery/jquery-2.1.1.min.js}"></script>
+    <script th:src="@{js/chat.js}"></script>
+</head>
+<body>
+    <noscript><h2 style="color: #f00">貌似你的浏览器不支持websocket</h2></noscript>
+    <p>聊天室</p>
+    <form id="wiselyForm">
+        <textarea name="text"  cols="60" rows="4"></textarea>
+        <input type="submit"/>
+    </form>
+    <div id="output"></div>
+    <button id="stop">断开</button>
+</body>
+</html>
