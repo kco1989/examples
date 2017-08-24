@@ -16,6 +16,13 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+            <dependency>
+                <groupId>org.jsoup</groupId>
+                <artifactId>jsoup</artifactId>
+                <version>${jsoup-version}</version>
+            </dependency>
+
             <!-- poi -->
             <dependency>
                 <groupId>org.apache.poi</groupId>
@@ -304,6 +311,7 @@
         <jackson-mapper-asl-version>1.9.13</jackson-mapper-asl-version>
         <druid-version>1.0.16</druid-version>
         <gson-verion>2.8.1</gson-verion>
+        <jsoup-version>1.10.3</jsoup-version>
     </properties>
 
 
