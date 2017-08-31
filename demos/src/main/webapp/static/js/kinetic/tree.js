@@ -28,15 +28,6 @@ $(function () {
     Tree.prototype = {
         _init: function (config) {
             $.extend(this, config);
-            // this.layer = config && config.layer;
-            // this.startPoint = config && config.startPoint;
-            // this.trunkHeight = config && config.trunkHeight;
-            // this.branchRate = config && config.branchRate;
-            // this.branchCount = config && config.branchCount;
-            // this.leftBranchMinAngle = config && config.leftBranchMinAngle;
-            // this.leftBranchMaxAngle = config && config.leftBranchMaxAngle;
-            // this.rightBranchMinAngle = config && config.rightBranchMinAngle;
-            // this.rightBranchMaxAngle = config && config.rightBranchMaxAngle;
         },
         draw: function () {
             this.layer.removeChildren();
@@ -58,8 +49,7 @@ $(function () {
             this._drawBranck(this._randomBranchRate(this.trunkHeight),endPoint,this._randomAngle(false), 0, false);
         },
         _drawBranck: function (height, startPoint, angle, branckCount, isLeft) {
-            // console.log(height + ", %o,"  +branckCount +"," + isLeft, startPoint);
-            if (branckCount >= this.branchCount){
+            if (branckCount > this.branchCount){
                 return;
             }
             var realAngle = 90 + angle ;
@@ -68,15 +58,15 @@ $(function () {
                 x: startPoint.x + height * Math.cos(realAngle * Math.PI / 180) ,
                 y: startPoint.y - height * Math.sin(realAngle * Math.PI / 180)
             };
-            this.layer.add(this._makeLine(startPoint, endPoint));
+            this.layer.add(this._makeLine(startPoint, endPoint,{
+                strokeWidth: (this.branchCount - branckCount * 2 < 0) ? 1 : 3,
+                stroke: (this.branchCount - branckCount * 2 < 0) ? 'red' : 'green'
+            }));
             var randomAngle = this._randomAngle(isLeft);
             this._drawBranck(this._randomBranchRate(height),endPoint,isLeft ? angle + randomAngle : angle - randomAngle, branckCount + 1, true);
             this._drawBranck(this._randomBranchRate(height),endPoint,isLeft ? angle - randomAngle : angle + randomAngle, branckCount + 1, false);
-            // this._drawBranck(this._randomBranchRate(height),endPoint,angle - randomAngle, branckCount + 1, true);
-            // this._drawBranck(this._randomBranchRate(height),endPoint,angle + randomAngle, branckCount + 1, true);
         },
         _makeLine: function (startPoint, endPoint, config) {
-            // console.log("%o, %o", startPoint, endPoint);
             var c = config || {};
             return new Kinetic.Line($.extend({},{
                 points: [
@@ -90,12 +80,10 @@ $(function () {
         _randomAngle:function (isLeft) {
             var minAngle = isLeft ? this.leftBranchMinAngle : this.rightBranchMinAngle;
             var maxAngle = isLeft ? this.leftBranchMaxAngle : this.rightBranchMaxAngle;
-            var angle = Math.random() * (maxAngle - minAngle) + minAngle;
-            return angle;
+            return Math.random() * (maxAngle - minAngle) + minAngle;
         },
         _randomBranchRate: function (height) {
            var rate = Math.random() * (this.treeBranchMaxRate - this.treeBranchMinRate) + this.treeBranchMinRate;
-           // console.log(rate * height);
            return rate * height;
         }
     };
