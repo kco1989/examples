@@ -26,5 +26,5 @@
 
     <import resource="classpath:META-INF/spring/applicationContext-jdbc-read.xml"/>
     <import resource="classpath:META-INF/spring/applicationContext-jdbc-write.xml"/>
-    <import resource="classpath:META-INF/spring/applicationContext-redis.xml"/>
+    <!--<import resource="classpath:META-INF/spring/applicationContext-redis.xml"/>-->
 </beans>
