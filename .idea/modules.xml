@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/springMvc/springMvc.iml" filepath="$PROJECT_DIR$/springMvc/springMvc.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootdemo1/springbootdemo1.iml" filepath="$PROJECT_DIR$/springbootdemo1/springbootdemo1.iml" />
       <module fileurl="file://$PROJECT_DIR$/springbootdemo2/springbootdemo2.iml" filepath="$PROJECT_DIR$/springbootdemo2/springbootdemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/staticweb/staticweb.iml" filepath="$PROJECT_DIR$/staticweb/staticweb.iml" />
     </modules>
   </component>
 </project>
