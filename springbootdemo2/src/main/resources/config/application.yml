@@ -9,3 +9,7 @@ book:
 author:
   name: kco1989
   age: 25
+#spring:
+#  thymeleaf:
+#    prefix: /templates/
+#    suffix: .html

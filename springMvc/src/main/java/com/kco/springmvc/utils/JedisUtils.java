@@ -10,7 +10,7 @@ import java.util.Set;
 /**
  * Created by Administrator on 2017/6/23.
  */
-@Component
+
 public class JedisUtils {
     @Resource
     private JedisPool jedisPool;

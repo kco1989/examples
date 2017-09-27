@@ -23,7 +23,7 @@ import java.util.*;
  * redis缓存切面
  * Created by Administrator on 2017/6/23.
  */
-@Component
+
 public class RedisCacheAop {
     protected static Logger logger = LoggerFactory.getLogger(RedisCacheAop.class);
     private static Gson gson = new Gson();

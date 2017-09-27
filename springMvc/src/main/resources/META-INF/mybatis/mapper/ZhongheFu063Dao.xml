@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.kco.springmvc.dao.ZhongheFu063Dao" >
+
+    <select id="listWithout063Agent" resultType="com.kco.springmvc.bean.zhf.AgentBean">
+        SELECT agent_no, agent_name FROM agent_info WHERE agent_no IN(
+            SELECT agent_no FROM agent_business_product WHERE bp_id IN ('205','206','207','209','210')
+        )AND agent_no NOT IN (
+            SELECT agent_no FROM agent_business_product WHERE bp_id = '208'
+        )AND agent_node LIKE '0-65637-%'
+    </select>
+</mapper>
