@@ -8,4 +8,7 @@ function showHello(divName: string, name: string){
 showHello("greeting", "good1");
 let rx1 = new Rx1();
 rx1.test1rx();
+rx1.test2rx();
+rx1.test3rx();
+
 
