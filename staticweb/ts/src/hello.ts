@@ -4,4 +4,5 @@
 export function hello(): string{
     return "Hello World!";
 }
+console.log("sss");
 export default hello;

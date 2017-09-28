@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register src/__test__/**/*.ts"
+    "test": "./node_modules/.bin/mocha -r ./node_modules/ts-node/register src/__test__/**/*.ts",
+    "start": "gulp ts2js && node "
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chai": "^4.0.4",
+    "@types/jquery": "^3.2.12",
     "@types/mocha": "^2.2.43",
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",
@@ -22,8 +24,10 @@
     "gulp-typescript": "^3.2.2",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
+    "jquery": "^3.2.1",
     "mocha": "^3.5.3",
     "rx": "^4.1.0",
+    "rxjs": "^5.4.3",
     "ts-node": "^3.3.0",
     "tsify": "^3.0.3",
     "typescript": "^2.5.3",
