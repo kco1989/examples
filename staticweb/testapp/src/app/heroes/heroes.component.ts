@@ -1,10 +1,12 @@
 import {Component, OnInit} from '@angular/core';
 import {Hero} from "../utils/Hero";
 import {HeroService} from "../utils/HelloService"
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'my-heroes',
-  templateUrl: './heroes.component.html'
+  templateUrl: './heroes.component.html',
+  styleUrls: ['./heroes.component.css']
 })
 export class HeroesComponent implements OnInit{
   ngOnInit(): void {
@@ -12,7 +14,10 @@ export class HeroesComponent implements OnInit{
     this.getHeroesPromise();
     // this.getHerosPromiseSlowly();
   }
-  constructor(private heroService: HeroService){}
+  constructor(
+    private heroService: HeroService,
+    private router: Router
+  ){}
   title = 'app';
   heroes : Hero[];
   hero : Hero = {
@@ -31,6 +36,9 @@ export class HeroesComponent implements OnInit{
   }
   getHerosPromiseSlowly():void{
     this.heroService.getHerosPromiseSlowly().then(heroes => this.heroes = heroes);
+  }
+  gotoDeatil():void{
+    this.router.navigate(['/detail', this.selectedHero.id]);
   }
 }
 
