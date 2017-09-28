@@ -6,7 +6,7 @@ import {HeroService} from "../utils/HelloService";
 @Component({
   selector: 'my-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css']
+  styleUrls: []
 })
 export class DashboardComponent implements OnInit{
   ngOnInit(): void {
@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit{
   title = "Tour of Heroes";
   heroes: Hero[];
   getHeroes(){
-    this.heroService.getHerosPromise().then(heroes => this.heroes = heroes.slice(0,4));
+    this.heroService.getHeroesHttp().then(heroes => this.heroes = heroes.slice(0,4));
 
   }
 }

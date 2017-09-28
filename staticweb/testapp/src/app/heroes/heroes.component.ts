@@ -32,13 +32,30 @@ export class HeroesComponent implements OnInit{
     this.heroes = this.heroService.getHeros();
   }
   getHeroesPromise():void{
-    this.heroService.getHerosPromise().then(heroes => this.heroes = heroes);
+    this.heroService.getHeroesHttp().then(heroes => this.heroes = heroes);
   }
   getHerosPromiseSlowly():void{
     this.heroService.getHerosPromiseSlowly().then(heroes => this.heroes = heroes);
   }
   gotoDeatil():void{
     this.router.navigate(['/detail', this.selectedHero.id]);
+  }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.heroService.create(name)
+      .then(hero => {
+        this.heroes.push(hero);
+        this.selectedHero = null;
+      });
+  }
+  delete(hero: Hero): void {
+    this.heroService
+      .delete(hero.id)
+      .then(() => {
+        this.heroes = this.heroes.filter(h => h !== hero);
+        if (this.selectedHero === hero) { this.selectedHero = null; }
+      });
   }
 }
 
