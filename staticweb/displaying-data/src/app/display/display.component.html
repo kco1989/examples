@@ -1,0 +1,14 @@
+hello {{title}}
+{{1 + 1}}
+{{ 1 == '1'}}
+{{ 1 === '1'}}
+<br>
+<hr>
+<span [hidden]="isUnchanged">changed</span><br>
+<button (click)="isUnchanged = !isUnchanged">toggle</button>
+<br>
+<input #phone type="text" placeholder="phone number">
+<button (click)="phone.value = 'good'">Call</button>
+<br>
+
+
