@@ -55,4 +55,7 @@ export class Rx1{
             .scan((count:number) => count + 1, 0)
             .subscribe(c => console.log(`clicked ${c} times`));
     }
+    test4rx(): void{
+        
+    }
 }
