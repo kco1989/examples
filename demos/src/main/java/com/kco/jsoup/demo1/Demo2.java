@@ -56,10 +56,8 @@ public class Demo2 {
                 "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB2tKhhvTFbliG",
                 // 我的女友是冥王
                 "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1ra-jvTFbliG",
-
-
         };
-        for (String url : baseUrl){
+        for (String url : Const.BOOK_URL){
             parseXSIndexUrl(url);
         }
 
