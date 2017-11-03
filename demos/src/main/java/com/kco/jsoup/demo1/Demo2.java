@@ -27,7 +27,37 @@ public class Demo2 {
 //                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LQxBt8aSbvOi-27BVBt_lqey6ylq",
 //                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LQxBt8wXyc275skNYWgK",
 //                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LQxBt8aSbvOi-28BJ3rbIwdzZz",
-                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LQxBt8aSbvOi-27Bp1tKNqey6ylq"
+//                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LQxBt8aSbvOi-27Bp1tKNqey6ylq"
+                // 茅山术之捉鬼人
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LPxBt8aSbvOi-27xF_rK6qey6ylq",
+                // 民间淫骨菩萨的传闻
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LPxBt8aSbvOi-27BF2qqRqey6ylq",
+                // 触摸恐怖最低限——窥阴
+                "http://www.shoujikanshu.org/Direct1/index_747.html",
+                // 隔壁漂亮姐姐让我用那种方法，帮她治不孕
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LPxBt8aSbvOi-27B2ArK-qey6ylq",
+                // 鬼姬
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LPxBt8aSbvOi-27xZ2qadqey6ylq",
+                // 浴缸
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7yGlPwx8LPxBt8aSbvOi-27xZ2tKxqey6ylq",
+                // 尸语者(法医秦明系列1)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1tKxnvTFbliG",
+                // 无声的证词(法医秦明系列2)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1tKxmvTFbliG",
+                // 第十一根手指(法医秦明系列3)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB2rqtkvTFbliG",
+                // 清道夫(法医秦明系列4)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1tKxpvTFbliG",
+                // 幸存者(法医秦明·第5季)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1tKxovTFbliG",
+                // 偷窥者(法医秦明第六季)
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1qaNhvTFbliG",
+                // 原来的世界
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB2tKhhvTFbliG",
+                // 我的女友是冥王
+                "http://transcoder.baiducontent.com/tc?srd=1&dict=32&h5ad=1&bdenc=1&lid=8874999729740906145&title=&nsrc=IlPT2AEptyoA_yixCFOxXnANedT62v3IEQGG_ztQ0Su9pEK7hO4nFRhpUDSqAp7pFlLdwWyRhAoDli8-OzFehhB1ra-jvTFbliG",
+
+
         };
         for (String url : baseUrl){
             parseXSIndexUrl(url);
