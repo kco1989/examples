@@ -1,10 +1,9 @@
-package com.kco.jsoup.demo4;
+package com.kco.jsoup.demo5;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 import java.io.File;
 import java.util.concurrent.BlockingQueue;
@@ -60,13 +59,8 @@ public class PaserUrlRunnable implements Runnable{
         ));
         connext.select("p[align='center'] img").stream().forEach(item ->{
             String dataSrc = item.attr("data-src");
-//            try {
-//                queue.put(dataSrc);
-//            } catch (InterruptedException e) {
-//                e.printStackTrace();
-//            }
+//            queue.add(dataSrc);
             item.attr("src", dataSrc.replaceAll("http://", ""));
-            item.attr("style", "max-width:100%;");
         });
         connext.select(".blockreference").remove();
         FileUtils.write(new File(baseFilePath + "index.html"), connext.toString(), true);

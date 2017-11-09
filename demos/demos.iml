@@ -21,8 +21,9 @@
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
     <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
     <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
-    <orderEntry type="library" name="Maven: io.reactivex.rxjava2:rxjava:2.1.4" level="project" />
-    <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpclient:4.5.3" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.httpcomponents:httpcore:4.4.6" level="project" />
+    <orderEntry type="library" name="Maven: commons-logging:commons-logging:1.2" level="project" />
     <orderEntry type="library" name="Maven: io.reactivex.rxjava2:rxjava:2.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.reactivestreams:reactive-streams:1.0.1" level="project" />
     <orderEntry type="library" name="Maven: org.jsoup:jsoup:1.10.3" level="project" />
