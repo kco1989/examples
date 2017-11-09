@@ -1,4 +1,4 @@
-package com.kco.jsoup.demo5;
+package com.kco.jsoup.youming;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.StringUtils;
@@ -41,7 +41,6 @@ public class WriteImgRunnable implements Runnable{
             System.out.println("--> " + poll + " <====> " + queue.size());
             String fileName = poll.replaceAll("http://", "");
             FileUtils.copyInputStreamToFile(execute.getEntity().getContent(), new File(baseFilePath + fileName));
-            Thread.sleep(50);
         }
     }
 

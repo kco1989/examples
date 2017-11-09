@@ -1,4 +1,4 @@
-package com.kco.jsoup.demo5;
+package com.kco.jsoup.youming;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -23,14 +23,13 @@ public class TuWenUtils{
         urls.add(new UrlBean("奇迹数据及特点资料百科","http://www.gamersky.com/handbook/201610/819816.shtml"));
         urls.add(new UrlBean("科技背景及解锁条件资料大全","http://www.gamersky.com/handbook/201610/819852.shtml"));
         urls.add(new UrlBean("市政背景及解锁条件资料大全","http://www.gamersky.com/handbook/201610/821023.shtml"));
-        urls.add(new UrlBean("",""));
-        urls.add(new UrlBean("",""));
-        urls.add(new UrlBean("",""));
     }
 
     public static void main(String[] args) throws IOException {
         BlockingQueue<String> queue = new LinkedBlockingDeque<>();
-        new Thread(new PaserUrlRunnable(baseFilePath, baseUrl, queue)).start();
-        new Thread(new WriteImgRunnable(baseFilePath, queue)).start();
+        for (UrlBean urlBean: urls){
+            new Thread(new PaserUrlRunnable(baseFilePath, urlBean, queue)).start();
+            new Thread(new WriteImgRunnable(baseFilePath, queue)).start();
+        }
     }
 }

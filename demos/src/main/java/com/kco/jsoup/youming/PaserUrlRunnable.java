@@ -1,4 +1,4 @@
-package com.kco.jsoup.demo5;
+package com.kco.jsoup.youming;
 
 import org.apache.commons.io.FileUtils;
 import org.jsoup.Jsoup;
@@ -13,10 +13,10 @@ import java.util.concurrent.BlockingQueue;
  */
 public class PaserUrlRunnable implements Runnable{
     private String baseFilePath;
-    private String baseUrl;
+    private UrlBean baseUrl;
     private BlockingQueue<String> queue;
 
-    public PaserUrlRunnable(String baseFilePath, String baseUrl, BlockingQueue<String> queue) {
+    public PaserUrlRunnable(String baseFilePath, UrlBean baseUrl, BlockingQueue<String> queue) {
         this.baseFilePath = baseFilePath;
         this.baseUrl = baseUrl;
         this.queue = queue;
@@ -25,7 +25,7 @@ public class PaserUrlRunnable implements Runnable{
     @Override
     public void run() {
         try {
-            FileUtils.write(new File(baseFilePath + "index.html"), "<!doctype html>\n" +
+            FileUtils.write(new File(baseFilePath +  baseUrl.getName() +".html"), "<!doctype html>\n" +
                     "<html lang=\"en\">\n" +
                     "<head>\n" +
                     "    <meta charset=\"UTF-8\">\n" +
@@ -35,8 +35,8 @@ public class PaserUrlRunnable implements Runnable{
                     "    <title>Document</title>\n" +
                     "</head>\n" +
                     "<body>", true);
-            paserUrl(baseUrl);
-            FileUtils.write(new File(baseFilePath + "index.html"), "\n" +
+            paserUrl(baseUrl.getUrl());
+            FileUtils.write(new File(baseFilePath + baseUrl.getName() +".html"), "\n" +
                     "</body>\n" +
                     "</html>", true);
         }catch (Exception e){
@@ -49,7 +49,7 @@ public class PaserUrlRunnable implements Runnable{
         System.out.println("===> " + url);
         Document parse = Jsoup.connect(url).execute().parse();
         Element element = parse.select("div.page_css a").last();
-        Element connext = Jsoup.connect(url).get().select(".Mid2L_con").last();
+        Element connext = parse.select(".Mid2L_con").last();
         connext.select("#pe100_page_contentpage").remove();
         connext.select("#pe100_page_contentpage").remove();
         connext.select(".referencecontent").remove();
@@ -59,11 +59,16 @@ public class PaserUrlRunnable implements Runnable{
         ));
         connext.select("p[align='center'] img").stream().forEach(item ->{
             String dataSrc = item.attr("data-src");
-//            queue.add(dataSrc);
+            try {
+                queue.put(dataSrc);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             item.attr("src", dataSrc.replaceAll("http://", ""));
+            item.attr("style", "max-width:100%;");
         });
         connext.select(".blockreference").remove();
-        FileUtils.write(new File(baseFilePath + "index.html"), connext.toString(), true);
+        FileUtils.write(new File(baseFilePath + this.baseUrl.getName() +".html"), connext.toString(), true);
         if (element != null && element.text().equals("下一页")){
             paserUrl(element.attr("href"));
         }else{
