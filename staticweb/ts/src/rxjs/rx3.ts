@@ -189,6 +189,12 @@ export class Rx3{
         subject.subscribe(v => console.log("B -> " + v));
         subject.next(5);
         subject.complete();
+    }
+    test14():void{
+        var data = {
+            a: 12,
+            b: "sdsd";
+        };
 
     }
 }

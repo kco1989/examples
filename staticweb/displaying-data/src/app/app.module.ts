@@ -5,12 +5,13 @@ import { AppComponent } from './app.component';
 import {DisplayComponent} from "./display/display.component";
 import {FormsModule} from "@angular/forms";
 import {FormComponent} from "./form/form.component";
-
+import { jqxBarGaugeComponent } from 'jqwidgets-framework/jqwidgets-ts/angular_jqxbargauge';
 @NgModule({
   declarations: [
     AppComponent,
     DisplayComponent,
-    FormComponent
+    FormComponent,
+    jqxBarGaugeComponent
   ],
   imports: [
     BrowserModule,
