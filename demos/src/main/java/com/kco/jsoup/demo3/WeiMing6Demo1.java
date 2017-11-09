@@ -1,0 +1,19 @@
+package com.kco.jsoup.demo3;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingDeque;
+
+/**
+ * Created by 666666 on 2017/11/9.
+ */
+public class WeiMing6Demo1 {
+    private final static String baseFilePath = "H:\\文明\\demo7\\";
+    private final static String baseUrl = "http://www.gamersky.com/handbook/201610/821023.shtml";
+
+    public static void main(String[] args) throws Exception {
+        BlockingQueue<String> queue = new LinkedBlockingDeque<>();
+        new Thread(new PaserUrlRunnable(baseUrl, queue)).start();
+        new Thread(new WriteImgRunnable(baseFilePath, queue)).start();
+    }
+
+}

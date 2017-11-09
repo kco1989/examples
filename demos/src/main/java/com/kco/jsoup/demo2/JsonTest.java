@@ -46,9 +46,11 @@ public class JsonTest {
                         .setType(cssMap.get(level))
                         .builder();
                 list.add(city);
+                System.out.println(city.getName());
                 parseNextLevel(province, level + 1, code);
             }
         }
+        write2File(list, true);
         System.out.println("完成");
     }
 
@@ -74,7 +76,7 @@ public class JsonTest {
                         .setType(cssMap.get(level))
                         .builder();
                 list.add(city);
-                write2File(list);
+                write2File(list, false);
                 Elements select = element.select("a");// 在递归调用的时候，这里是判断是否是村一级的数据，村一级的数据没有a标签
                 if (select.size() != 0) {
                     parseNextLevel(select.last(), level + 1, code);
@@ -83,18 +85,15 @@ public class JsonTest {
         }
     }
 
-    private static void write2File(List<CityCode> list) {
-        if (list.size() < 500){
+    private static void write2File(List<CityCode> list, boolean fouce) throws IOException {
+        if (!fouce && list.size() < 500){
             return;
         }
-        File file = new File("d:\\CityInfos.json");
-        list.stream().forEach(item -> {
-            try {
-                FileUtils.write(file, item.toString(),"utf-8", true);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        });
+        File file = new File("d:\\全国区域.json");
+        for (CityCode cityCode : list){
+            FileUtils.write(file, cityCode.toString(),"utf-8", true);
+        }
+        list.clear();
         System.out.println("第" + (++count) + "次...........");
     }
 
