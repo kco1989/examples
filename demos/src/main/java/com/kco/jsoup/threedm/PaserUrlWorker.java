@@ -28,6 +28,7 @@ public class PaserUrlWorker {
             writeImgPool.execute(new WriteImgRunnable(this.baseFilePath, this.queue, this.paserUrlPool));
             paserUrlPool.execute(new PaserUrlRunnable(this.baseFilePath, urlBean, this.queue));
         }
+        paserUrlPool.shutdown();
 
     }
 }
