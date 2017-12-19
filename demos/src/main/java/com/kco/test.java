@@ -150,10 +150,12 @@ public class test {
 //        System.out.println(bossInfo.getResult().size());
 //    }
     public static void main(String[] args) {
-        BigDecimal bigDecimal = new BigDecimal(".48");
-        BigDecimal bigDecimal2 = new BigDecimal(".535");
-        System.out.println(bigDecimal2.setScale(2, BigDecimal.ROUND_CEILING));
-        System.out.println(bigDecimal.compareTo(bigDecimal2));
+//        BigDecimal bigDecimal = new BigDecimal(".48");
+//        BigDecimal bigDecimal2 = new BigDecimal(".535");
+//        System.out.println(bigDecimal2.setScale(2, BigDecimal.ROUND_CEILING));
+//        System.out.println(bigDecimal.compareTo(bigDecimal2));
+        boolean valid = IDCardUtil.isValid("440582198909252611");
+        System.out.println(valid);
     }
 }
 

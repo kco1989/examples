@@ -1,0 +1,6 @@
+urls:
+ - http://www.doupocangqiong1.com/wdqk/
+ - http://www.doupocangqiong1.com/wdqk2/
+bookNameXPath: bookName
+chapterAnchorXPath: chapter
+contentXPath: content
